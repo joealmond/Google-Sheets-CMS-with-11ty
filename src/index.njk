@@ -4,3 +4,11 @@ layout: base.njk
 ---
 
 <h1>Helló!</h1>
+
+<p>Statikus adat tartalom minta: {{ content.sheetTitle[1].columnName5 }}</p>
+<p id="documentTitle">Google Sheets dokumnetum: {{ sheets.docTitle }}</p>
+<p id="sheetTitle">Munkalap: {{ sheets.sheetTitle }}</p>
+<p id="rowCount">Összes sor: {{ sheets.sheetRowCount }}</p>
+<p id="cell">A megadott cella tartalma: {{ sheets.cell }}</p>
+
+<!-- <script src="./js/index.js"></script> -->
