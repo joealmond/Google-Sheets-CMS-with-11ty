@@ -2,9 +2,9 @@
   "name": "google-sheets-cms-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "eleventy",
+    "start": "eleventy --serve"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "google-spreadsheet": "^3.1.15"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
   }
 }
