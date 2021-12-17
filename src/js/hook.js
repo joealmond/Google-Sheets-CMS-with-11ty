@@ -1,15 +1,23 @@
-let buildHash;
-let hashReference;
+let buildHash = "";
+let hashReference = "";
 fetch("buildHash.txt")
   .then((response) => response.text())
   .then((text) => (buildHash = text.valueOf()))
-  .then(() => (hashReference = buildHash));
+  .then((text) => (hashReference = text.valueOf()))
+  .then((text) => sessionStorage.setItem("deployHash", text.valueOf()));
+
+let hashValue = sessionStorage.getItem("deployHash");
 
 function checkBuildHashChange() {
   console.log("checking");
-  if (hashReference !== buildHash) {
+
+  fetch("buildHash.txt")
+    .then((response) => response.text())
+    .then((text) => (buildHash = text.valueOf()));
+
+  if (hashValue !== buildHash) {
     console.log("reload");
-    // location.reload();
+    location.reload();
   }
 }
 
