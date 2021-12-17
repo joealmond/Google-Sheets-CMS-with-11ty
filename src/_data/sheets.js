@@ -26,6 +26,6 @@ module.exports = async function () {
     docTitle: doc.title,
     sheetTitle: sheet.title,
     sheetRowCount: sheet.rowCount,
-    cell: rows[0].component,
+    cell: rows[0].B,
   };
 };
