@@ -19,7 +19,7 @@ function checkBuildHashChange() {
   }
 }
 
-setInterval(checkBuildHashChange, 3000);
+setInterval(checkBuildHashChange, 1000);
 
 // const content = reader.readAsText("file://buildHash.txt");
 
