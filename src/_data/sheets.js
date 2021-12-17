@@ -1,3 +1,6 @@
+let rowNum = 0;
+let colLetter = "B";
+
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 require("dotenv").config();
 
@@ -26,6 +29,6 @@ module.exports = async function () {
     docTitle: doc.title,
     sheetTitle: sheet.title,
     sheetRowCount: sheet.rowCount,
-    cell: rows[0].B,
+    cell: rows[rowNum][colLetter],
   };
 };

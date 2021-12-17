@@ -3,17 +3,31 @@ title: JAMstack with Google sheets data
 layout: base.njk
 ---
 
-<h1>Proof of concept: Google Sheets as persistent storage for web app data</h1>
+<h1>Proof of concept: Google Sheets as a CMS for a website</h1>
+<h3>
+  Features automatic deploy and page refres on the modifcation of content in
+  GoogleSheets
+</h3>
 
-<p>
+<!-- <p>
   Static data content sample from a local .json file:
   {{ content.sheetTitle[1].columnName5 }}
-</p>
+</p> -->
 <p>Google sheets data:</p>
 <p id="documentTitle">Documnet name: {{ sheets.docTitle }}</p>
 <p id="sheetTitle">Sheet: {{ sheets.sheetTitle }}</p>
 <p id="rowCount">Total rows: {{ sheets.sheetRowCount }}</p>
-<p id="cell">The specified call content: {{ sheets.cell }}</p>
+<p id="cell">
+  Contents of the "B2" cell: <strong>{{ sheets.cell }}</strong>
+</p>
+<a
+  href="https://docs.google.com/spreadsheets/d/1iWguDwX3ANg8Bym8iDUOhJs8pxdvavYCbbvEVKYNZ1k/edit?usp=sharing"
+  >Link to the Sheet</a
+>
+<p>
+  Try to modify the cell "B2" in the link above, it will automatically redeploy
+  and show the contents @ Contents of the "B2" cell:"
+</p>
 <img src="img/GoogleSheets.jpeg" alt="" />
 
 <script src="./js/hook.js"></script>
