@@ -6,8 +6,6 @@ fetch("buildHash.txt")
   .then((text) => (hashReference = text.valueOf()))
   .then((text) => sessionStorage.setItem("deployHash", text.valueOf()));
 
-let hashValue = sessionStorage.getItem("deployHash");
-
 function checkBuildHashChange() {
   console.log("checking");
 
@@ -15,7 +13,7 @@ function checkBuildHashChange() {
     .then((response) => response.text())
     .then((text) => (buildHash = text.valueOf()));
 
-  if (hashValue !== buildHash) {
+  if (sessionStorage.getItem("deployHash") !== buildHash) {
     console.log("reload");
     location.reload();
   }
