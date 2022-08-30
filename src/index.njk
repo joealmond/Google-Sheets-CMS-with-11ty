@@ -14,11 +14,19 @@ layout: base.njk
   {{ content.sheetTitle[1].columnName5 }}
 </p> -->
 <p>Google sheets data:</p>
-<p id="documentTitle">Documnet name: {{ sheets.docTitle }}</p>
-<p id="sheetTitle">Sheet: {{ sheets.sheetTitle }}</p>
-<p id="rowCount">Total rows: {{ sheets.sheetRowCount }}</p>
+<p id="documentTitle">
+  Documnet name: <strong>{{ sheets.docTitle }}</strong>
+</p>
+<p id="sheetTitle">
+  Sheet: <strong>{{ sheets.sheetTitle }}</strong>
+</p>
+<p id="rowCount">
+  Total rows: <strong>{{ sheets.sheetRowCount }}</strong>
+</p>
 <p id="cell">
-  Contents of the "B2" cell at the moment: <strong>{{ sheets.cell }}</strong>
+  Try to modify the cell "B2" below, it will automatically redeploy in the
+  following one minute, and shows the contents of the modified "B2" cell here:
+  <strong>{{ sheets.cell }}</strong>
 </p>
 <!-- <a
   href="https://docs.google.com/spreadsheets/d/1jOcswNISJMtt_9Nvq89P0__V_WTpc1h-aTOfPPUKkQE/edit?usp=sharing"
@@ -29,10 +37,10 @@ layout: base.njk
   Try to modify the cell "B2" in the link above, it will automatically redeploy
   and show the contents @ Contents of the "B2" cell:"
 </p> -->
-<p>
+<!-- <p>
   Try to modify the cell "B2" below, it will automatically redeploy in the
-  followin one minute, and shows the contents of the modified "B2" cell here:"
-</p>
+  following one minute, and shows the contents of the modified "B2" cell here:"
+</p> -->
 <!-- <img src="img/GoogleSheets.jpeg" alt="" /> -->
 <!-- <iframe
 width='800' height='600' frameborder='0' src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSi2_tFwJKKrx8MCsax3YLCfUzIuaqAJ_CC5D7qsatZcnIyR3whx25QUEq5x8XIUk9OXr4hAZwmHoO/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
@@ -41,7 +49,7 @@ width='800' height='600' frameborder='0' src="https://docs.google.com/spreadshee
   width="800"
   height="600"
   frameborder="0"
-  src="https://docs.google.com/spreadsheets/d/1jOcswNISJMtt_9Nvq89P0__V_WTpc1h-aTOfPPUKkQE/edit#gid=0"
+  src="https://docs.google.com/spreadsheets/d/1jOcswNISJMtt_9Nvq89P0__V_WTpc1h-aTOfPPUKkQE/edit#gid=0;single=true&amp;widget=true&amp;headers=false"
 ></iframe>
 
 <script src="./js/hook.js"></script>
