@@ -20,7 +20,7 @@ layout: base.njk
 <p id="cell">
   Contents of the "B2" cell at the moment: <strong>{{ sheets.cell }}</strong>
 </p>
-<a
+<!-- <a
   href="https://docs.google.com/spreadsheets/d/1jOcswNISJMtt_9Nvq89P0__V_WTpc1h-aTOfPPUKkQE/edit?usp=sharing"
   target="_blank"
   >Link to the Sheet</a
@@ -28,10 +28,20 @@ layout: base.njk
 <p>
   Try to modify the cell "B2" in the link above, it will automatically redeploy
   and show the contents @ Contents of the "B2" cell:"
+</p> -->
+<p>
+  Try to modify the cell "B2" below, it will automatically redeploy in the
+  followin one minute, and shows the contents of the modified "B2" cell here:"
 </p>
 <!-- <img src="img/GoogleSheets.jpeg" alt="" /> -->
+<!-- <iframe
+width='800' height='600' frameborder='0' src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSi2_tFwJKKrx8MCsax3YLCfUzIuaqAJ_CC5D7qsatZcnIyR3whx25QUEq5x8XIUk9OXr4hAZwmHoO/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+></iframe> -->
 <iframe
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSi2_tFwJKKrx8MCsax3YLCfUzIuaqAJ_CC5D7qsatZcnIyR3whx25QUEq5x8XIUk9OXr4hAZwmHoO/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+  width="800"
+  height="600"
+  frameborder="0"
+  src="https://docs.google.com/spreadsheets/d/1jOcswNISJMtt_9Nvq89P0__V_WTpc1h-aTOfPPUKkQE/edit#gid=0"
 ></iframe>
 
 <script src="./js/hook.js"></script>
