@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://docs.google.com; frame-ancestors https://docs.google.com https://accounts.google.com; sandbox allow-scripts allow-same-origin allow-popups">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self'; 
+  frame-src https://docs.google.com; 
+  frame-ancestors https://docs.google.com https://accounts.google.com https://ogs.google.com https://contacts.google.com; 
+  sandbox allow-scripts allow-same-origin allow-popups
+"
+    />
+
     <!-- redirect to netlify -->
     <meta
       http-equiv="refresh"
